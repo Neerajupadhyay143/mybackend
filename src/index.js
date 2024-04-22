@@ -28,6 +28,10 @@ dotenv.config({
 })
 
 connectDB().then(() => {
+
+    app.get("/Home", (req, res) => {
+        res.send("we are on home page ")
+    })
     app.listen(process.env.PORT || 8000, () => {
         console.log(` we are on ${process.env.PORT || 8000} port`)
     })
